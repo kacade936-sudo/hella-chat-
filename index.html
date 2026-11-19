@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Hella Chat</title>
+  <style>
+    :root {
+      --bg: #f6faf8;
+      --surface: #ffffff;
+      --surface-alt: #edf6f2;
+      --text: #111b21;
+      --text-muted: #4a5c66;
+      --primary: #0b6e4f;
+      --primary-dark: #07533b;
+      --border: #d7e6df;
+      --badge-bg: #dff3ea;
+      --badge-text: #064e38;
+      --shadow: 0 8px 28px rgba(11, 110, 79, 0.08);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b141a;
+        --surface: #111b21;
+        --surface-alt: #18252d;
+        --text: #e9edef;
+        --text-muted: #9eb0ba;
+        --primary: #25d366;
+        --primary-dark: #1da851;
+        --border: #23333d;
+        --badge-bg: #123829;
+        --badge-text: #8ff0b7;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #07533b 0%, #0b6e4f 60%, #128c66 100%);
+      color: #ffffff;
+      padding: 48px 20px 56px;
+      text-align: center;
+    }
+
+    .hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      color: #ffffff;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin: 0 auto;
+      max-width: 660px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.02rem;
+    }
+
+    .meta-bar {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 24px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .container {
+      max-width: 880px;
+      margin: -28px auto 48px;
+      padding: 0 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: clamp(22px, 4vw, 42px);
+    }
+
+    .toc {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-bottom: 30px;
+    }
+
+    .toc h2 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--primary);
+      border: none;
+      padding: 0;
+    }
+
+    .toc ul {
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 6px 18px;
+    }
+
+    .toc a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.94rem;
+    }
+
+    .toc a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    h2 {
+      margin: 34px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      font-size: 1.32rem;
+      color: var(--primary);
+    }
+
+    h3 {
+      margin: 20px 0 8px;
+      font-size: 1.06rem;
+      color: var(--text);
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin: 0 0 16px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 7px;
+    }
+
+    .callout {
+      background: var(--surface-alt);
+      border-left: 4px solid var(--primary);
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      margin: 18px 0;
+      font-size: 0.96rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 22px;
+      font-size: 0.94rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 11px 12px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--surface-alt);
+      font-weight: 600;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      padding: 2px 6px;
+      border-radius: 5px;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      thead {
+        display: none;
+      }
+      tr {
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        margin-bottom: 12px;
+        overflow: hidden;
+      }
+      td {
+        border: none;
+        border-bottom: 1px solid var(--border);
+      }
+      td:last-child {
+        border-bottom: none;
+      }
+      td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="badge">Hella Chat &bull; Android Application</div>
+      <h1>Privacy Policy</h1>
+      <p>
+        Your privacy and message security are foundational to Hella Chat. This Privacy Policy
+        explains what information the Hella Chat Android application collects, how it is used,
+        how it is protected, and the controls available to you.
+      </p>
+      <div class="meta-bar">
+        <span><strong>Effective Date:</strong> November 19, 2026</span>
+        <span><strong>Package ID:</strong> com.aistudio.pulsechat.kqmxvz</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="card">
+      <nav class="toc" aria-label="Table of Contents">
+        <h2>Contents</h2>
+        <ul>
+          <li><a href="#overview">1. Overview &amp; Scope</a></li>
+          <li><a href="#data-collected">2. Information We Collect</a></li>
+          <li><a href="#how-we-use">3. How We Use Information</a></li>
+          <li><a href="#encryption-security">4. Encryption &amp; App Lock Security</a></li>
+          <li><a href="#permissions">5. Device Permissions</a></li>
+          <li><a href="#sharing-third-parties">6. Third-Party Services &amp; Data Sharing</a></li>
+          <li><a href="#retention-deletion">7. Data Retention &amp; Account Deletion</a></li>
+          <li><a href="#user-controls">8. Your Privacy Controls</a></li>
+          <li><a href="#children">9. Children's Privacy</a></li>
+          <li><a href="#changes-contact">10. Changes &amp; Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <section id="overview">
+        <h2>1. Overview &amp; Scope</h2>
+        <p>
+          This Privacy Policy applies to the <strong>Hella Chat</strong> mobile application
+          (Android package <code>com.aistudio.pulsechat.kqmxvz</code>) and describes how your
+          information is processed when you sign in, send messages, post status updates, participate
+          in communities or channels, link companion devices, or make voice and video calls.
+        </p>
+        <div class="callout">
+          <strong>Summary:</strong> Hella Chat uses Google Sign-In for authentication, stores your
+          account, messages, statuses, and settings in Google Cloud Firestore scoped by security
+          rules, supports client-side end-to-end encryption for direct messages, keeps biometric and
+          app-lock credentials exclusively on your device, and does not sell your personal data or
+          serve third-party behavioral advertising.
+        </div>
+      </section>
+
+      <section id="data-collected">
+        <h2>2. Information We Collect</h2>
+
+        <h3>A. Account &amp; Profile Information</h3>
+        <p>When you sign in with Google and complete onboarding, Hella Chat collects and stores:</p>
+        <ul>
+          <li><strong>Google Authentication Identifiers:</strong> Your Firebase User ID (UID), email address, email verification status, and basic Google profile name/photo provided by Google Sign-In via Jetpack Credential Manager.</li>
+          <li><strong>Public Profile Details:</strong> Your chosen unique <code>@username</code>, display name, bio/about text, optional profile picture, online/last-seen presence state (subject to your privacy settings), and your public ECDH encryption key.</li>
+          <li><strong>Account Preferences &amp; Private Settings:</strong> Notification preferences, language choice (English, Somali, Arabic), theme mode, wallpaper/bubble customizations, blocked/muted/archived/pinned conversation lists, optional recovery email, and optional hashed 6-digit Two-Step Verification PIN.</li>
+        </ul>
+
+        <h3>B. Contacts, Chats, Statuses, Communities &amp; Channels</h3>
+        <ul>
+          <li><strong>Messages &amp; Shared Media:</strong> Text messages, emojis, stickers, GIFs, voice recordings, images, videos, documents, reply/forward metadata, reactions, and read/delivery receipts stored in Cloud Firestore conversations.</li>
+          <li><strong>User-Added Contacts &amp; Phone Lookup Index:</strong> Contacts you explicitly look up or add by username or phone number. Phone numbers indexed for discovery use one-way cryptographic SHA-256 hashing so raw phone numbers are not exposed in the public lookup index.</li>
+          <li><strong>Statuses (24-Hour Expiry):</strong> Text, photo, video, collage layout, or voice status updates you post, along with viewer lists and timestamps according to your chosen status privacy audience.</li>
+          <li><strong>Communities &amp; Channels:</strong> Community names, descriptions, membership/admin lists, group memberships, public or private channel metadata, posts, and follower counts.</li>
+          <li><strong>User Reports:</strong> Moderation reports you submit (reported user ID, optional conversation ID, and reason).</li>
+        </ul>
+
+        <h3>C. Voice &amp; Video Calls and Linked Devices</h3>
+        <ul>
+          <li><strong>Call Metadata &amp; Signaling:</strong> Call type (voice or video), participant IDs, timestamps, call status, call duration, and transient WebRTC signaling data (SDP offers/answers and ICE candidates) required to connect peer-to-peer calls.</li>
+          <li><strong>Linked Devices:</strong> Device name, platform type, device ID, pairing session codes, and last active timestamps when you link additional devices via QR code pairing.</li>
+        </ul>
+
+        <h3>D. Local Device-Only Data</h3>
+        <ul>
+          <li><strong>Encryption Private Keys:</strong> Your ECDH private key pair is generated and stored locally in private app preferences on your device and is never uploaded to Firestore.</li>
+          <li><strong>App Lock Credentials:</strong> Pattern, PIN, or Password lock secrets are stored locally on your device as salted SHA-256 hashes. Fingerprint verification relies strictly on Android's system <code>BiometricPrompt</code> API; Hella Chat never accesses or stores raw fingerprint images or biometric templates.</li>
+          <li><strong>Offline Outbox &amp; Theme/Voice Cache:</strong> Queued unsent messages when offline and temporary media playback/recording cache files are stored locally on your device.</li>
+        </ul>
+      </section>
+
+      <section id="how-we-use">
+        <h2>3. How We Use Information</h2>
+        <p>We process your information solely to operate, secure, and improve Hella Chat:</p>
+        <ul>
+          <li>Authenticate your account securely using Google Sign-In and maintain your signed-in session (including multi-account switching).</li>
+          <li>Deliver real-time one-to-one chats, group conversations, community announcements, channel posts, status updates, and delivery/read receipts.</li>
+          <li>Establish real-time WebRTC voice and video calls and post call summaries to your conversation history.</li>
+          <li>Enforce per-user security controls, Two-Step Verification, blocked user filtering, disappearing message timers, and abuse reporting.</li>
+          <li>Provide optional user-initiated cloud chat backup and restore stored inside your private Firestore backup document.</li>
+          <li>Synchronize linked companion devices after explicit QR pairing confirmation.</li>
+        </ul>
+      </section>
+
+      <section id="encryption-security">
+        <h2>4. Encryption &amp; App Lock Security</h2>
+        <ul>
+          <li><strong>In-Transit Protection:</strong> All communications with Firebase Authentication, Cloud Firestore, and signaling endpoints use encrypted HTTPS/TLS connections. WebRTC media streams use standard DTLS-SRTP encryption.</li>
+          <li><strong>End-to-End Encryption (Direct Messages):</strong> Hella Chat implements client-side ECDH (P-256) key agreement combined with AES-256-GCM encryption and a deterministic 60-digit safety verification number so participants can verify key fingerprints.</li>
+          <li><strong>Access Control:</strong> Cloud Firestore security rules restrict private settings, contacts, backups, and linked device records to the authenticated owner UID, and restrict conversations, messages, and calls to authorized participants.</li>
+          <li><strong>On-Device App Lock:</strong> You can lock Hella Chat locally with a Pattern, PIN, Password, or Fingerprint before anyone with physical access to your unlocked phone can open your chats.</li>
+        </ul>
+      </section>
+
+      <section id="permissions">
+        <h2>5. Device Permissions</h2>
+        <p>Hella Chat requests permissions on a least-privilege basis only when you use the corresponding feature:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Purpose in Hella Chat</th>
+              <th>Requirement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Permission"><code>INTERNET</code> &amp; <code>ACCESS_NETWORK_STATE</code></td>
+              <td data-label="Purpose">Sign in with Google, sync real-time messages/statuses, and connect voice/video calls.</td>
+              <td data-label="Requirement">Required (Install-time)</td>
+            </tr>
+            <tr>
+              <td data-label="Permission"><code>CAMERA</code></td>
+              <td data-label="Purpose">Make video calls, capture photos/videos in chat, and scan QR codes for contacts or Linked Devices.</td>
+              <td data-label="Requirement">Optional (Runtime)</td>
+            </tr>
+            <tr>
+              <td data-label="Permission"><code>RECORD_AUDIO</code> &amp; <code>MODIFY_AUDIO_SETTINGS</code></td>
+              <td data-label="Purpose">Record voice messages, post voice statuses, and transmit audio during voice/video calls.</td>
+              <td data-label="Requirement">Optional (Runtime)</td>
+            </tr>
+            <tr>
+              <td data-label="Permission"><code>POST_NOTIFICATIONS</code></td>
+              <td data-label="Purpose">Display alerts for incoming messages and calls on Android 13+ devices.</td>
+              <td data-label="Requirement">Optional (Runtime)</td>
+            </tr>
+            <tr>
+              <td data-label="Permission"><code>USE_BIOMETRIC</code></td>
+              <td data-label="Purpose">Verify your identity via Android BiometricPrompt when Fingerprint App Lock is enabled.</td>
+              <td data-label="Requirement">Optional (User-enabled)</td>
+            </tr>
+            <tr>
+              <td data-label="Permission"><code>VIBRATE</code></td>
+              <td data-label="Purpose">Provide notification and incoming call vibration alerts according to your settings.</td>
+              <td data-label="Requirement">Optional (Normal)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          <strong>Photos, Videos &amp; Documents:</strong> Hella Chat uses the Android Photo Picker and
+          Storage Access Framework (document picker), so you only grant access to the specific media or
+          files you choose to share without broad storage permissions.
+        </p>
+      </section>
+
+      <section id="sharing-third-parties">
+        <h2>6. Third-Party Services &amp; Data Sharing</h2>
+        <p>Hella Chat does not sell, rent, or trade your personal information. Data is shared only in these limited cases:</p>
+        <ul>
+          <li><strong>With Other Users You Communicate With:</strong> Your public profile (<code>@username</code>, display name, avatar, bio), messages, statuses (based on your selected visibility), group/community participation, and call requests are visible to the recipients or public channel audiences you choose.</li>
+          <li><strong>Google &amp; Firebase Infrastructure:</strong> Hella Chat uses Google Firebase Authentication (Google Sign-In), Google Cloud Firestore (real-time database and security rules), Google Play Services Credential Manager, and on-device Google ML Kit Barcode Scanning (QR processing runs locally on your device).</li>
+          <li><strong>Legal &amp; Safety Obligations:</strong> Information may be disclosed if required by applicable law, valid legal process, or to investigate abuse reports submitted through the app.</li>
+        </ul>
+      </section>
+
+      <section id="retention-deletion">
+        <h2>7. Data Retention &amp; Account Deletion</h2>
+        <ul>
+          <li><strong>Active Accounts:</strong> Profile data, conversations, and settings remain stored while your account is active, unless deleted by you or subject to disappearing message timers.</li>
+          <li><strong>24-Hour Statuses:</strong> Status updates are configured with a 24-hour expiration window, and owners can manually delete their statuses at any time.</li>
+          <li><strong>Message Deletion:</strong> You may delete messages using <em>Delete for Me</em> (hides the message from your account) or <em>Delete for Everyone</em> (replaces message content and clears encrypted/media payloads for all participants).</li>
+          <li><strong>Full Account Deletion:</strong> You can permanently delete your account from <strong>Settings &rarr; Account &rarr; Delete Account</strong>. Deleting your account removes your public user profile, private info, cloud chat backup, saved contacts, linked device records, username claim, hashed phone lookup record, and Firebase Authentication user record.</li>
+        </ul>
+      </section>
+
+      <section id="user-controls">
+        <h2>8. Your Privacy Controls</h2>
+        <p>Inside <strong>Settings</strong>, you can manage at any time:</p>
+        <ul>
+          <li>Visibility of your <strong>Last Seen &amp; Online</strong> status, <strong>Profile Photo</strong>, and who can add you to <strong>Groups</strong> (Everyone, Contacts, or Nobody).</li>
+          <li><strong>Read Receipts</strong> toggle and <strong>Status Privacy</strong> (My Contacts, My Contacts Except..., or Only Share With...).</li>
+          <li><strong>Disappearing Messages</strong> default timer and <strong>View Once</strong> media option.</li>
+          <li><strong>Blocked Contacts</strong>, <strong>Linked Devices</strong> (view and unlink sessions), <strong>Two-Step Verification PIN</strong>, and <strong>App Lock</strong> (Pattern, PIN, Password, or Fingerprint).</li>
+          <li><strong>Cloud Backup</strong> creation/restoration and notification sound/preview preferences.</li>
+        </ul>
+      </section>
+
+      <section id="children">
+        <h2>9. Children's Privacy</h2>
+        <p>
+          Hella Chat is not intended for children under the age of 13 (or the minimum digital consent
+          age required in your jurisdiction). We do not knowingly collect personal information from
+          children under 13. If you believe a child has provided personal information through Hella Chat,
+          please contact us so we can review and delete the account.
+        </p>
+      </section>
+
+      <section id="changes-contact">
+        <h2>10. Changes &amp; Contact Us</h2>
+        <p>
+          We may update this Privacy Policy from time to time as new features or legal requirements
+          arise. When updates occur, we will revise the Effective Date at the top of this page.
+        </p>
+        <p>
+          If you have any questions, privacy requests, or data-deletion inquiries regarding Hella Chat,
+          please contact the developer at:
+        </p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:cabdallecabdalleyare5@gmail.com">cabdallecabdalleyare5@gmail.com</a><br />
+          <strong>Application:</strong> Hella Chat (<code>com.aistudio.pulsechat.kqmxvz</code>)
+        </p>
+      </section>
+
+      <footer>
+        &copy; 2026 Hella Chat. All rights reserved.
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
